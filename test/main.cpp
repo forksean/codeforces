@@ -4,30 +4,18 @@ using namespace std;
 
 int main()
 {
-    //
-    int n, q;
-    cin >> n >> q;
-    int cursize = 0;
-    set<int> diff;
-    vector<int> pos;
+    //////
+    //////
+    int n;
+    cin >> n;
+    vector<string> subs;
     for(int i = 1; i <= n; i++)
     {
-        int num;
-        cin >> num;
-        diff.insert(num);
-        if(cursize != diff.size())
-        {
-            pos.push_back(i);
-            cursize = diff.size();
-        }
+        string inpt;
+        cin >> inpt;
+        subs.push_back(inpt);
     }
-    if(cursize < q)
-        cout << "NO";
-    else
-    {
-        cout << "YES" << endl;
-        for(int j = 0; j < q; j++)
-            cout << pos[j] << " ";
-    }
+    sort(subs.begin(), subs.end());
+
     return 0;
 }
